@@ -1,233 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "p8nc9jjdeu");
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santo Puthoor</title>
-   <link rel="icon" href="santoputhoor.jpeg" type="image/jpeg">
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      background: black;
-      color: lime;
-      font-family: monospace;
-    }
-
-    canvas {
-      display: block;
-    }
-
-    #typewriter {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 3rem;
-      color: lime;
-      white-space: nowrap;
-    }
-
-    #cursor {
-      display: inline-block;
-      animation: blink 0.6s step-end infinite;
-    }
-
-    .logo-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .logo {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      opacity: 0.8;
-    }
-
-    #enterButton {
-      display: none;
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px 20px;
-      font-size: 1.5rem;
-      color: lime;
-      background-color: black;
-      border: 2px solid lime;
-      cursor: pointer;
-    }
-
-    #enterButton {
-      display: none;
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px 20px;
-      font-size: 1.5rem;
-      color: lime;
-      background-color: black;
-      border: 2px solid lime;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    #enterButton:hover {
-      background-color: lime;
-      color: black;
-    }
-
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-  </style>
+  <title>Santo Puthoor | IT Director & Software Architect</title>
+  <link rel="icon" href="santoputhoor.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Clarity Tracking -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "p8nc9jjdeu");
+  </script>
 </head>
+
 <body>
-<canvas id="matrixCanvas"></canvas>
-<div id="typewriter"><span id="text"></span><span id="cursor">_</span></div>
-<button type="button" id="enterButton">Enter</button>
-<div class="logo-container"></div>
+  <div id="splash-screen">
+    <div class="eclipse-container" id="eclipse-trigger">
+      <div class="sun"></div>
+      <div class="moon"></div>
+      <div class="shining-ring"></div>
+    </div>
+    <div class="splash-text double-tone-text">SANTO PUTHOOR</div>
+  </div>
 
-<script>
-  // Matrix Rain Effect
-  const canvas = document.getElementById('matrixCanvas');
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  <div class="main-wrapper" id="main-wrapper">
+    <nav>
+      <div class="container nav-content">
+        <div class="logo-container">
+          <div class="nav-mini-profile" id="nav-mini-profile">
+            <img src="santoputhoor.jpeg" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="logo-text double-tone-text" id="dev-logo-text">SP</div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+        </ul>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+          <div class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+          </div>
+          <a href="https://www.linkedin.com/in/santo-puthoor-25545536" target="_blank" class="btn"
+            style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Contact</a>
+        </div>
+      </div>
+    </nav>
 
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
-  const fontSize = 16;
-  const columns = canvas.width / fontSize;
-  const drops = Array.from({ length: columns }, () => 1);
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="profile-container">
+          <div class="profile-circle"></div>
+          <img src="santoputhoor.jpeg" alt="Santo Puthoor" class="profile-img">
+        </div>
+        <div class="container hero-content">
+          <p class="hero-subtitle">IT Director • Digital Architect • Strategist</p>
+          <h1 id="hero-name" class="double-tone-text">SANTO PUTHOOR</h1>
+          <p style="max-width: 700px; margin: 0 auto 2.5rem; color: var(--text-muted); font-size: 1.2rem;">
+            Architecting high-performance enterprise solutions and driving technical excellence with
+            over two decades of leadership. Specializing in .NET ecosystems, AI integration,
+            and large-scale database optimization.
+          </p>
+          <div class="hero-btns" style="display: flex; gap: 1.5rem; justify-content: center;">
+            <a href="#experience" class="btn">Experience</a>
+            <a href="#certifications" class="btn"
+              style="background: transparent; border: 1px solid var(--primary); color: var(--primary);">Credentials</a>
+          </div>
+        </div>
+      </section>
 
-  let animationsPaused = false;
+      <!-- About Section -->
+      <section class="container" id="about">
+        <div class="glass-card about-main-card">
+          <div class="about-grid">
+            <div class="about-text-content">
+              <h2 class="double-tone-text" style="margin-bottom: 1.5rem; font-size: clamp(2rem, 5vw, 2.5rem);">The
+                Vision</h2>
+              <p>
+                Accomplished IT Director with a track record of spearheading software innovation
+                leveraging .NET, SQL, and cutting-edge Blazor technology. Expert in aligning
+                technical strategy with organizational goals, optimizing mission-critical database
+                performance, and mentoring high-performing engineering teams.
+              </p>
+            </div>
+            <div class="about-stats-container">
+              <div class="glass-card stat-item">
+                <h4 class="double-tone-text">20+ Years</h4>
+                <p>Industry Expertise</p>
+              </div>
+              <div class="glass-card stat-item">
+                <h4 class="double-tone-text">1+ TB</h4>
+                <p>Database Management</p>
+              </div>
+              <div class="glass-card stat-item">
+                <h4 class="double-tone-text">50+ Apps</h4>
+                <p>Enterprise Deployments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  function drawMatrix() {
-    if (animationsPaused) return;
+      <!-- Skills Section -->
+      <section class="container" id="skills">
+        <h2 style="text-align: center; margin-bottom: 4rem; font-size: 2.5rem;">Core Competencies</h2>
+        <div class="skills-grid">
+          <div class="glass-card skill-item">
+            <img src="dotnet.ico" alt=".NET">
+            <h3 style="font-size: 1.1rem; margin-top: 1rem;">.NET / C#</h3>
+          </div>
+          <div class="glass-card skill-item">
+            <img src="blazor.png" alt="Blazor">
+            <h3 style="font-size: 1.1rem; margin-top: 1rem;">Blazor</h3>
+          </div>
+          <div class="glass-card skill-item">
+            <img src="oracle.png" alt="Oracle">
+            <h3 style="font-size: 1.1rem; margin-top: 1rem;">Oracle SQL</h3>
+          </div>
+          <div class="glass-card skill-item">
+            <img src="python.png" alt="Python">
+            <h3 style="font-size: 1.1rem; margin-top: 1rem;">Python / AI</h3>
+          </div>
+          <div class="glass-card skill-item">
+            <img src="java.png" alt="Java">
+            <h3 style="font-size: 1.1rem; margin-top: 1rem;">Java</h3>
+          </div>
+          <div class="glass-card skill-item">
+            <img src="php.png" alt="PHP">
+            <h3 style="font-size: 1.1rem; margin-top: 1rem;">PHP</h3>
+          </div>
+        </div>
+      </section>
 
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#0F0";
-    ctx.font = `${fontSize}px monospace`;
+      <!-- Experience Section -->
+      <section class="container" id="experience">
+        <div style="text-align: center; margin-bottom: 4rem;">
+          <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Professional Journey</h2>
+          <p style="color: var(--text-muted);">20+ Years of Enterprise Software Leadership</p>
+        </div>
+        <div class="timeline">
+          <div class="experience-item">
+            <div class="glass-card">
+              <p class="experience-date">2019 - PRESENT</p>
+              <h3>IT Director</h3>
+              <p style="color: var(--primary); margin-bottom: 1.5rem; font-weight: 600;">Techorbit Trading LLC, Dubai
+              </p>
+              <ul style="list-style: none; display: grid; gap: 0.8rem; color: var(--text-main);">
+                <li>• Governing omnichannel cybersecurity services and infrastructure architecture.</li>
+                <li>• Spearheading data analytics strategies using BI platforms for executive decision-making.</li>
+                <li>• Managing multimillion-dirham IT budgets and optimizing cloud migration roadmaps.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="experience-item">
+            <div class="glass-card">
+              <p class="experience-date">2013 - 2019</p>
+              <h3>IT Director</h3>
+              <p style="color: var(--primary); margin-bottom: 1.5rem; font-weight: 600;">Waypoint Systems FZCO, Dubai
+              </p>
+              <ul style="list-style: none; display: grid; gap: 0.8rem; color: var(--text-main);">
+                <li>• Orchestrated full-lifecycle software development for enterprise ERP systems.</li>
+                <li>• Advised stakeholders on digital transformation and cost-effective tech adoption.</li>
+                <li>• Led technical teams of 20+ developers in high-stakes environment.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="experience-item">
+            <div class="glass-card">
+              <p class="experience-date">2003 - 2013</p>
+              <h3>System Analyst</h3>
+              <p style="color: var(--primary); margin-bottom: 1.5rem; font-weight: 600;">National Trading and
+                Development
+                Est, Dubai</p>
+              <ul style="list-style: none; display: grid; gap: 0.8rem; color: var(--text-main);">
+                <li>• Coordinated critical application development and system change specifications.</li>
+                <li>• Managed and optimized 1+ TB Oracle databases ensuring mission-critical uptime.</li>
+                <li>• Bridged gap between business requirements and technical implementation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    drops.forEach((y, index) => {
-      const text = letters[Math.floor(Math.random() * letters.length)];
-      const x = index * fontSize;
-      ctx.fillText(text, x, y * fontSize);
+      <!-- Projects Section -->
+      <section class="container" id="projects">
+        <div style="text-align: center; margin-bottom: 4rem;">
+          <h2 class="double-tone-text" style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1rem;">Flagship
+            Projects</h2>
+          <p style="color: var(--text-muted);">Innovations in AI, Low-Code, and Enterprise ERP</p>
+        </div>
+        <div class="responsive-grid">
+          <div class="glass-card">
+            <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: start;">
+              <h3 style="color: var(--primary);">DataVox AI</h3>
+              <span
+                style="font-size: 0.75rem; padding: 4px 12px; background: var(--primary-dim); color: var(--primary); border: 1px solid var(--primary); border-radius: 20px;">Generative
+                AI</span>
+            </div>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              A pioneering AI solution bridging complex RDBMS (Oracle, SQL Server) with natural language processing.
+              Enables non-technical users to query massive datasets using intuitive English.
+            </p>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">#NLP</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">#Oracle</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">#LLM</span>
+            </div>
+          </div>
+          <div class="glass-card">
+            <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: start;">
+              <h3 style="color: var(--primary);">RAAP Platform</h3>
+              <span
+                style="font-size: 0.75rem; padding: 4px 12px; background: var(--primary-dim); color: var(--primary); border: 1px solid var(--primary); border-radius: 20px;">Low-Code</span>
+            </div>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              Rapid Application Platform. A proprietary Blazor-based low-code environment for
+              accelerated enterprise app development, supporting multiple concurrent database connections.
+            </p>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">#Blazor</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">#DotNet</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">#Architect</span>
+            </div>
+          </div>
+          <div class="glass-card">
+            <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: start;">
+              <h3 style="color: var(--primary);">Enterprise ERP</h3>
+              <span
+                style="font-size: 0.75rem; padding: 4px 12px; background: var(--primary-dim); color: var(--primary); border: 1px solid var(--primary); border-radius: 20px;">Retail
+                & Trade</span>
+            </div>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              Full-scale ERP system deployed across 50+ companies in the UAE. Covers full procurement,
+              HRMS, assets, and multi-currency accounting modules.
+            </p>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">#ERP</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">#Scale</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">#UAE</span>
+            </div>
+          </div>
+        </div>
 
-      if (y * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[index] = 0;
-      }
-      drops[index]++;
-    });
-  }
+      </section>
 
-  setInterval(drawMatrix, 50);
+      <!-- Certifications Section -->
+      <section class="container" id="certifications">
+        <div style="text-align: center; margin-bottom: 4rem;">
+          <h2 class="double-tone-text" style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1rem;">Certifications
+            & Badges</h2>
+          <p style="color: var(--text-muted);">Verified Professional Credentials</p>
+        </div>
+        <div class="responsive-grid">
+          <!-- PMP -->
+          <a href="https://www.credly.com/badges/18c1ca62-4624-4bf4-aa01-48731f02d680" target="_blank"
+            class="glass-card"
+            style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1.5rem;">
+            <img src="1733385455_santo-puthoor/1733385455_santo-puthoor-1.png" alt="PMP"
+              style="width: 70px; height: 70px; object-fit: contain;">
+            <div>
+              <h3 style="color: var(--primary); font-size: 1.1rem;">Project Management Professional</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">PMI Global Standard (Multiple
+                Credentials)</p>
+            </div>
+          </a>
+          <!-- Oracle -->
+          <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=429F290765A81607731724442B7C5B5BF31C776902C1E4FDD3BB2480C2EFEB36"
+            target="_blank" class="glass-card"
+            style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1.5rem;">
+            <img src="1733385455_santo-puthoor/1733385455_santo-puthoor-2.png" alt="Oracle"
+              style="width: 70px; height: 70px; object-fit: contain;">
+            <div>
+              <h3 style="color: var(--primary); font-size: 1.1rem;">Oracle Certified Professional</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">Mastery in Database
+                Architecture
+                & SQL</p>
+            </div>
+          </a>
+          <!-- Microsoft -->
+          <a href="https://www.credly.com/badges/22b97c15-19e2-4a0b-b691-667af4b0cfc5/linked_in_profile" target="_blank"
+            class="glass-card"
+            style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1.5rem;">
+            <img src="microsoft.png" alt="Microsoft"
+              style="width: 70px; height: 70px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(0,242,255,0.3));">
+            <div>
+              <h3 style="color: var(--primary); font-size: 1.1rem;">Microsoft Certified</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">Azure & Enterprise Solutions
+                Expertise</p>
+            </div>
+          </a>
+        </div>
+        <div style="text-align: center; margin: 6rem 0 12rem 0;">
+          <p style="color: var(--text-muted); margin-bottom: 2rem;">For a full list of verified achievements and
+            Microsoft technical credits:</p>
+          <a href="https://learn.microsoft.com/en-us/users/santoputhoor" target="_blank" class="btn"
+            style="padding: 1rem 3rem; font-size: 0.9rem; background: transparent; border: 1px solid var(--primary); color: var(--primary);">View
+            Dashboard</a>
+        </div>
+      </section>
+    </main>
 
-  // Typewriter Effect
-  const name = "SANTO PUTHOOR";
-  const textElement = document.getElementById('text');
-  const enterButton = document.getElementById('enterButton');
-  let typeIndex = 0;
-  let playCount = 0;
+    <div class="bg-glow">
+      <div class="glow-orb" id="orb1" style="top: -10%; left: -10%;"></div>
+      <div class="glow-orb" id="orb2"
+        style="bottom: -10%; right: -10%; background: radial-gradient(circle, rgba(136, 136, 136, 0.1) 0%, transparent 70%);">
+      </div>
+    </div>
 
-  function typeWriter() {
-    if (animationsPaused) return;
+  </div>
 
-    if (typeIndex < name.length) {
-      textElement.textContent += name[typeIndex];
-      typeIndex++;
-      setTimeout(typeWriter, 150);
-    } else {
-      playCount++;
-      if (playCount < 3) {
-        setTimeout(() => {
-          typeIndex = 0;
-          textElement.textContent = "";
-          typeWriter();
-        }, 1000); // Delay before restarting
-      } else {
-        enterButton.style.display = "block";
-        animationsPaused = true;
-      }
-    }
-  }
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-details">
+        <h2 class="double-tone-text" style="margin-bottom: 1.5rem; font-size: clamp(1.5rem, 5vw, 1.8rem);">SANTO PUTHOOR
+        </h2>
+        <div class="footer-detail-item">
+          <span>EMAIL</span> <a href="mailto:sanpkn@gmail.com">sanpkn@gmail.com</a>
+        </div>
+        <div class="footer-detail-item">
+          <span>PHONE</span> <a href="tel:+971558871268">+971 55 887 1268</a>
+        </div>
+        <div class="footer-detail-item">
+          <span>LOCATION</span> Dubai, UAE
+        </div>
+      </div>
 
-  typeWriter();
+      <div class="footer-bottom-right">
+        <a href="https://www.linkedin.com/in/santo-puthoor-25545536" target="_blank" class="footer-social">
+          LinkedIn Profile ↗
+        </a>
+        <div class="footer-copy">
+          <p>&copy; 2024 SANTO PUTHOOR. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  // Pause Animations and Show Enter Button
-  enterButton.addEventListener('click', () => {
-    animationsPaused = false;
-    enterButton.style.display = "none";
-    typeIndex = 0;
-    playCount = 0;
-    textElement.textContent = "";
-    typeWriter();
-  });
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // Ensure scroll to top on load
+    window.scrollTo(0, 0);
 
-  // Logos Animation
-  const logos = [
-    "dotnet.ico", "chatgpt.png", "visualstudio.png", "java.png",
-    "oracle.png", "microsoft.png", "python.png",
-    "php.png", "blazor.png"
-  ];
+    // Splash Screen Transition
+    const splash = document.getElementById('splash-screen');
+    const wrapper = document.getElementById('main-wrapper');
+    const trigger = document.getElementById('eclipse-trigger');
 
-  const logoContainer = document.querySelector('.logo-container');
+    trigger.addEventListener('click', () => {
+      window.scrollTo(0, 0);
 
-  logos.forEach(src => {
-    const img = document.createElement('img');
-    img.src = src;
-    img.classList.add('logo');
-    img.style.left = `${Math.random() * window.innerWidth}px`;
-    img.style.animation = `moveLogo ${2 + Math.random() * 3}s linear infinite`;
-    logoContainer.appendChild(img);
-  });
+      // Eclipse animation
+      gsap.to(".moon", { x: 80, opacity: 0, duration: 1.8, ease: "power4.inOut" });
+      gsap.to(".sun", { scale: 20, duration: 2.2, ease: "power2.in", opacity: 0 });
+      gsap.to(".shining-ring", { scale: 8, opacity: 0, duration: 1.8 });
+      gsap.to(".splash-text", { opacity: 0, y: 50, duration: 1.2 });
 
-  // Pause Animations and Show Enter Button
-enterButton.addEventListener('click', () => {
-  animationsPaused = false;
-  enterButton.style.display = "none";
-  typeIndex = 0;
-  playCount = 0;
-  textElement.textContent = "";
-  typeWriter();
-
-  // Redirect to home.html
-  window.location.href = 'home.html';
-});
-
-
-  document.querySelectorAll('.logo').forEach(logo => {
-    const randomKeyframes = `
-        @keyframes moveLogo {
-          from {
-            transform: translateY(-50px);
-          }
-          to {
-            transform: translateY(${window.innerHeight + 50}px);
-          }
+      // Fade splash out
+      gsap.to(splash, {
+        opacity: 0,
+        duration: 1,
+        delay: 1.2,
+        onComplete: () => {
+          splash.style.display = 'none';
+          wrapper.classList.add('visible');
+          initMainAnimations();
         }
-      `;
-    const styleSheet = document.styleSheets[0];
-    styleSheet.insertRule(randomKeyframes, styleSheet.cssRules.length);
-  });
-</script>
+      });
+    });
+
+    function initMainAnimations() {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const mainTl = gsap.timeline();
+
+      // 0. Ensure visibility
+      gsap.set("#home", { opacity: 1, visibility: "visible" });
+      gsap.set(".hero-content", { opacity: 0, y: 30, visibility: "visible" });
+      gsap.set(".profile-container", { scale: 0, opacity: 0, visibility: "visible" });
+
+      // 1. Initial Hero Reveal (Center)
+      mainTl.to(".profile-container", {
+        scale: 1,
+        opacity: 1,
+        duration: 1.5,
+        ease: "back.out(1.7)"
+      })
+        .to(".hero-content", {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out"
+        }, "-=1");
+
+      // 2. Profile Migration (Step 1)
+      mainTl.to(".profile-container", {
+        delay: 0.8,
+        duration: 1.8,
+        ease: "power3.inOut",
+        x: () => {
+          const mini = document.getElementById('nav-mini-profile');
+          const targetRect = mini.getBoundingClientRect();
+          const containerRect = document.querySelector('.profile-container').getBoundingClientRect();
+          return targetRect.left - containerRect.left + (targetRect.width / 2 - containerRect.width / 2);
+        },
+        y: () => {
+          const mini = document.getElementById('nav-mini-profile');
+          const targetRect = mini.getBoundingClientRect();
+          const containerRect = document.querySelector('.profile-container').getBoundingClientRect();
+          return targetRect.top - containerRect.top + (targetRect.height / 2 - containerRect.height / 2);
+        },
+        scale: 0.15,
+        opacity: 0,
+        onComplete: () => {
+          gsap.to("#nav-mini-profile", {
+            opacity: 1,
+            scale: 1,
+            duration: 1,
+            ease: "elastic.out(1, 0.5)"
+          });
+        }
+      });
+
+      // 3. Layout Shift Up
+      mainTl.to(".hero", {
+        minHeight: "40vh",
+        paddingTop: "4rem",
+        justifyContent: "flex-start",
+        duration: 1.2,
+        ease: "power2.inOut"
+      }, "-=1");
+
+      mainTl.to(".hero-subtitle", {
+        opacity: 0,
+        y: -20,
+        duration: 0.8,
+        ease: "power2.in"
+      }, "-=1");
+
+      mainTl.to(".profile-container", {
+        height: 0,
+        marginBottom: 0,
+        duration: 1,
+        ease: "power2.inOut"
+      }, "-=1.2");
+
+      // 4. Reveal Rest (Once content is landed)
+      mainTl.add(() => {
+        gsap.utils.toArray("section").forEach(section => {
+          if (section.id === 'home') return;
+          gsap.fromTo(section,
+            { opacity: 0, y: 100 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1.5,
+              scrollTrigger: {
+                trigger: section,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+              }
+            }
+          );
+        });
+      });
+      // 5. Shared Scroll triggered reveals
+      gsap.utils.toArray(".glass-card").forEach(card => {
+        gsap.from(card.children, {
+          opacity: 0,
+          y: 20,
+          duration: 0.8,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%"
+          }
+        });
+      });
+    }
+
+    // Theme Toggle Logic
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', nextTheme);
+
+      // Update glow orbs based on theme
+      if (nextTheme === 'light') {
+        gsap.to(".glow-orb", { opacity: 0.1, duration: 0.5 });
+      } else {
+        gsap.to(".glow-orb", { opacity: 0.8, duration: 0.5 });
+      }
+    });
+
+    // Mouse move effect always active for background orbs
+    document.addEventListener("mousemove", (e) => {
+      const { clientX, clientY } = e;
+      const x = (clientX / window.innerWidth - 0.5);
+      const y = (clientY / window.innerHeight - 0.5);
+
+      gsap.to(".glow-orb", {
+        x: x * 100,
+        y: y * 100,
+        duration: 2,
+        ease: "power2.out",
+        stagger: 0.2
+      });
+
+      if (wrapper.classList.contains('visible')) {
+        gsap.to(".profile-container", {
+          x: x * 20,
+          y: y * 20,
+          rotation: x * 5,
+          duration: 1,
+          ease: "power1.out"
+        });
+      }
+    });
+  </script>
 </body>
+
 </html>
